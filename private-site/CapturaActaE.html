@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+    <div>
+        <figure class="figure">
+               <img data-v-27b47ae7="" src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" alt="logo gobierno de méxico" class="logos" style="width: 15rem; margin-top: -2%; margin-bottom: -2%; margin-left: -2%;">
+        </figure>
+    </div>
+
+<h2>Instituto del bienestar electoral</h2>
+<p>Captura datos de acta electoral.</p>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="./gestion.html">
+         <div class="row">
+            <div class="col-50">
+              <label for="fnumeroevento">Numero del Evento</label>
+              <input type="text" id="fnumeroevento" name="numereoevento" placeholder="aqui Numero evento">
+            </div>
+            <div class="col-50">
+              <label for="fnombreevento">Nombre del Evento</label>
+              <input type="text" id="fnombreevento" name="nombreevento" placeholder="Aqui Nombre del Evento">
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Datos de la Casilla</h3>
+            <label for="fnumeroacta"><i class="fa fa-envelope"></i> Numero del Acta</label>
+            <input type="text" id="fnumeroacta" name="numeroacta" placeholder="Numero Acta">
+            <label for="fcasilla"><i class="fa fa-address-card-o"></i> Casilla</label>
+            <input type="text" id="fcasilla" name="casilla" placeholder="000">
+            
+            <label for="fentidadfederativa"><i class="fa fa-institution"></i> Entidad Federativa</label>
+            <select id="fentidadfederativa" name="entidadfederativa">
+             
+                <option value="00">Seleccione uno...</option>
+                <option value="01">Aguascalientes</option>
+                <option value="02">Baja California</option>
+                <option value="03">Baja California Sur</option>
+                <option value="04">Campeche</option>
+                <option value="05">Chiapas</option>
+                <option value="06">Chihuahua</option>
+                <option value="07">Ciudad de México</option>
+                <option value="08">Coahuila</option>
+                <option value="09">Colima</option>
+                <option value="10">Durango</option>
+                <option value="11">Estado de México</option>
+                <option value="12">Guanajuato</option>
+                <option value="13">Guerrero</option>
+                <option value="14">Hidalgo</option>
+                <option value="15">Jalisco</option>
+                <option value="16">Michoacán</option>
+                <option value="17">Morelos</option>
+                <option value="18">Nayarit</option>
+                <option value="19">Nuevo León</option>
+                <option value="20">Oaxaca</option>
+                <option value="21">Puebla</option>
+                <option value="22">Querétaro</option>
+                <option value="23">Quintana Roo</option>
+                <option value="24">San Luis Potosí</option>
+                <option value="25">Sinaloa</option>
+                <option value="26">Sonora</option>
+                <option value="27">Tabasco</option>
+                <option value="28">Tamaulipas</option>
+                <option value="29">Tlaxcala</option>
+                <option value="30">Veracruz</option>
+                <option value="31">Yucatán</option>
+                <option value="32">Zacatecas</option>
+            </select>  
+          </div>
+
+          <div class="col-50">
+            <h3>Registro de votos</h3>
+            <label for="fPartido1"><i class="fa fa-user-circle" aria-hidden="true"></i> Partido Uno</label>
+            <input type="text" id="fPartido1" name="partidouno" placeholder="Votos en numero">
+            <label for="fPartido2"><i class="fa fa-user-circle" aria-hidden="true"></i> Partido Dos</label>
+            <input type="text" id="fPartido2" name="partidodos" placeholder="Votos en numero">
+            <label for="fPartido3"><i class="fa fa-user-circle" aria-hidden="true"></i> Partido Tres</label>
+            <input type="text" id="fPartido3" name="partidotres" placeholder="Votos en numero">
+            <label for="ftotalvotos">Total de Votos</label>
+           <div class="row">
+           </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Confirma que los datos capturados son correctos
+        </label>
+        <input type="submit" value="Guardar Acta Electoral" class="btn">
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
